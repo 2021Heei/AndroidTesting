@@ -1,5 +1,66 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {}
+    "启动": {
+        "action": "StartApp",
+        "package": "com.sodalife.sodax",
+        "post_delay": 3000,
+        "next": [
+            "点击我的"
+        ]
+    },
+    "点击我的": {
+        "recognition": "OCR",
+        "expected": "我的",
+        "action": "Click",
+        "next": [
+            "点击联系客服"
+        ]
+    },
+    "点击联系客服": {
+        "recognition": "OCR",
+        "expected": "联系客服",
+        "action": "Click",
+        "next": [
+            "点击在线客服"
+        ]
+    },
+    "点击在线客服": {
+        "recognition": "OCR",
+        "expected": "在线客服",
+        "action": "Click",
+        "next": [
+            "点击输入框"
+        ]
+    },
+    "点击输入框": {
+        "recognition": "OCR",
+        "expected": "请简短描述您的问题",
+        "action": "Click",
+        "next": [
+            "输入输入框"
+        ]
+    },
+    "输入输入框": {
+        "action": "InputText",
+        "input_text": "司马广告 祝倒闭-v-",
+        "next": [
+            "点击发送"
+        ]
+    },
+    "点击发送": {
+        "recognition": "OCR",
+        "expected": "发送",
+        "action": "Click",
+        "next": [
+            "点击退出"
+        ]
+    },
+    "点击退出": {
+        "recognition": "TemplateMatch",
+        "template": "叉号.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "点击联系客服"
+        ]
+    }
 }

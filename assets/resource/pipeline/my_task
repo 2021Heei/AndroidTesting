@@ -1,0 +1,58 @@
+{
+    "点击存储": {
+        "recognition": "OCR",
+        "expected": "存储",
+        "action": "Click",
+        "next": [
+            "上滑"
+        ]
+    },
+    "上滑": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            500,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            100,
+            10,
+            10
+        ],
+        "next": [
+            "点击游戏"
+        ]
+    },
+    "点击游戏": {
+        "recognition": "TemplateMatch",
+        "template": "点击游戏.png",
+        "action": "Click"
+    }
+}
+
+{
+    "输入管理器": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "叉号.png",
+            "加号.png",
+            "三个点.png",
+            "分享.png",
+            "喇叭.png",
+            "请简短描述您的问题.png"
+        ],
+        "order_by": "Vertical",
+        "index": 0,
+        "action": "DoNothing",
+        "next": [
+            "输入输入框1",
+            "输入输入框2",
+            "输入输入框3",
+            "输入输入框4",
+            "输入输入框5",
+            "输入输入框6"
+        ]
+    },
+}
